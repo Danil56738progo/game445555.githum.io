@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.game-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.player {
+  position: absolute;
+  width: 50px; /* Размер корабля игрока */
+  height: 50px;
+  background-image: url("player.png"); /* Путь к изображению корабля игрока */
+  background-size: cover;
+  bottom: 10px;
+  left: calc(50% - 25px);
+}
+
+.bullet {
+  position: absolute;
+  width: 5px; /* Размер пули */
+  height: 15px;
+  background-color: yellow; /* Цвет пули */
+  display: none;
+}
+
+.enemies {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.asteroid {
+  position: absolute;
+  width: 50px; /* Размер астероида */
+  height: 50px;
+  background-image: url("asteroid.png"); /* Путь к изображению астероида */
+  background-size: cover;
+}
+
+.top-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 20px);
+}
+
+.score,
+.record {
+  color: white;
+  font-size: 24px;
+}
+
+.restart-btn,
+.exit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.restart-btn:hover,
+.exit-btn:hover {
+  background-color: #45a049;
+}
